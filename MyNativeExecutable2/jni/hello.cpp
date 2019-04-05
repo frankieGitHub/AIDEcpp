@@ -4,7 +4,7 @@
 
 using namespace std;
 
-///find a value in a tree start
+///test1 find a value in a tree start
 struct tNode {
 	int data;
 	
@@ -24,9 +24,23 @@ struct tNode* findValue(struct tNode* root, int data)
 	
 	return NULL;
 }
-///find a value in a tree end
+///test1 find a value in a tree end
 
+///test2 revert in form of bits start
+template <class T>
+T revT(T t)
+{
+    T out = 0;
 
+    for(int i=0; i<sizeof(T)*8; i++)
+    {
+        if(t & (1<<i))
+          out |= 1 << (sizeof(T)*8-1-i);
+    }
+
+    return out;
+}
+///test2 revert in form of bits end
 
 
 
