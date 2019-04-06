@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "cup.h"
 
 using namespace std;
 
@@ -61,6 +62,9 @@ int main()
 	{
 	    cout << myArrays[i] << endl;
 	}
+	
+	Cup cup1;
+	cup1.name = "cup1";
 	
 	
 	std::cout << "Hello github" << std::endl;

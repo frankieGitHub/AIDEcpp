@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 
 LOCAL_CPP_EXTENSION := .cpp .cc
 
-LOCAL_SRC_FILES = hello.cpp
+LOCAL_SRC_FILES = hello.cpp cup.cpp
 
 LOCAL_MODULE := hello
 
