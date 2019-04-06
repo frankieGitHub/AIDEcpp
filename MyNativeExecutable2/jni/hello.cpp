@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <fstream>
 #include "cup.h"
 
 using namespace std;
@@ -43,7 +44,42 @@ T revT(T t)
 }
 ///test2 revert in form of bits end
 
+///file io start
+bool fileWrite(const char* f)
+{
+	ofstream of(f);
+	
+	if(!of) {
+		cout << "of fail" << endl;
+		return false;
+	}
+	
+	of << "aaa" << endl;
+	
+	of.close();
+}
 
+bool fileOpen(const char* f)
+{
+	//ifstream fs(filePath, ifstream::in);
+	fstream fs;
+	
+	fs.open(f, fstream::in);
+	
+	cout << fs.rdbuf();
+	
+	
+	/*if(!fs.is_open()) {
+		cout << "open fail" << endl;
+		return false;
+	}*/
+	
+	fs.close();
+	cout << "open ok" << endl;
+	
+	return true;
+}
+///file io end
 
 int main()
 {
@@ -65,6 +101,10 @@ int main()
 	
 	Cup cup1;
 	cup1.name = "cup1";
+	
+	char* cupHeader = "/sdcard/test.txt";
+	bool result = fileWrite(cupHeader);
+	result = fileOpen(cupHeader);
 	
 	
 	std::cout << "Hello github" << std::endl;
