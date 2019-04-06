@@ -1,3 +1,5 @@
+#ifndef CUP_H
+#define CUP_H
 #include <iostream>
 #include <string>
 
@@ -13,3 +15,5 @@ public:
     Cup();
     void theWayToDrink(void);
 };
+
+#endif
