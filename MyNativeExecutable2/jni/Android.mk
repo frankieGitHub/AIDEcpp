@@ -12,4 +12,5 @@ ifeq ($(TARGET_ARCH_ABI),x86)
     LOCAL_CFLAGS += -ffast-math -mtune=atom -mssse3 -mfpmath=sse
 endif
 
+#include $(BUILD_SHARED_LIBRARY)
 include $(BUILD_EXECUTABLE)
